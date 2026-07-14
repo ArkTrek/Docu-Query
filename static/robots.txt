@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /uploads
+Disallow: /clear
+
+Sitemap: https://docu-query-six.vercel.app/sitemap.xml
