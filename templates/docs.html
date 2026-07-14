@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuQuery - Documentation</title>
+    <meta name="description" content="Documentation and guide for DocuQuery AI.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <!-- Background animated shapes for glassmorphism contrast -->
+    <div class="bg-shape shape1"></div>
+    <div class="bg-shape shape2"></div>
+    <div class="bg-shape shape3"></div>
+
+    <nav class="navbar glass-panel">
+        <div class="nav-brand">DocuQuery</div>
+        <div class="nav-links">
+            <a href="/">Application</a>
+            <a href="/docs" class="active">Documentation</a>
+        </div>
+    </nav>
+
+    <div class="app-container docs-container">
+        <main class="docs-content glass-panel">
+            <h1>DocuQuery Documentation</h1>
+            <p class="subtitle">Your ultimate guide to utilizing the AI Data Extraction Specialist.</p>
+
+            <section class="doc-section">
+                <h2>Overview</h2>
+                <p>DocuQuery is an advanced Retrieval-Augmented Generation (RAG) tool powered by <strong>NVIDIA's Meta
+                        Llama 3.1</strong>. It allows you to upload heavy PDF documents (like financial reports,
+                    scientific papers, or tabular datasets) and instantly ask questions about them.</p>
+            </section>
+
+            <section class="doc-section">
+                <h2>How to Use</h2>
+                <ol>
+                    <li><strong>Upload:</strong> Navigate to the <a href="/">Application tab</a> and drag your PDF into
+                        the upload zone. Wait for the processing to finish.</li>
+                    <li><strong>Ask:</strong> Type questions into the chat box. Ask for specific numbers, metrics, or
+                        summaries.</li>
+                    <li><strong>Analyze:</strong> The AI will extract the data from your document and present it cleanly
+                        using Markdown tables or bulleted lists.</li>
+                    <li><strong>Reset:</strong> Use the <em>Clear All Data</em> button to wipe your local database and
+                        start fresh with a new document.</li>
+                </ol>
+            </section>
+
+            <section class="doc-section">
+                <h2>Privacy & Data</h2>
+                <p>All embeddings are generated using NVIDIA's API and stored entirely <strong>locally</strong> in your
+                    own Chroma database folder. Your data is not permanently hosted on any external servers.</p>
+            </section>
+        </main>
+    </div>
+
+    <footer class="app-footer">
+        <p>Powered by <span class="highlight">Llama</span> & LangChain. Built with precision.</p>
+    </footer>
+</body>
+
+</html>
