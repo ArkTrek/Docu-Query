@@ -608,6 +608,26 @@ h1, h2, h3, .nav-brand {
     font-weight: 600;
 }
 
+.author-info {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.author-info strong {
+    color: var(--text-primary);
+}
+
+.author-info a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.author-info a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
 /* Responsive Mobile Adjustments */
 @media (max-width: 768px) {
     .app-container {
