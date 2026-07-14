@@ -11,7 +11,10 @@ from core.vector_store import add_documents_to_db, CHROMA_PATH, clear_db
 from core.llm_chain import answer_query
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = 'uploads'
+if os.environ.get('VERCEL') == '1':
+    app.config['UPLOAD_FOLDER'] = '/tmp/uploads'
+else:
+    app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16 MB limit
 
 @app.after_request
