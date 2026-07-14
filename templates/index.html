@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DocuQuery - AI Document Assistant</title>
-    <meta name="description" content="Upload your PDF documents and ask questions using NVIDIA AI.">
+    <meta name="description" content="DocuQuery: Upload your PDF documents and get intelligent answers instantly using NVIDIA's advanced Llama 3.1 AI.">
+    <link rel="canonical" href="https://docu-query-six.vercel.app/" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -36,7 +37,10 @@
                 <h2>Document Upload</h2>
                 <div id="drop-zone" class="drop-zone">
                     <div class="upload-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Upload Icon">
+                            <title>Upload PDF Icon</title>
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
                     </div>
                     <p class="drop-text">Drag & drop your PDF here</p>
                     <p class="drop-hint">or click to browse</p>
@@ -59,7 +63,10 @@
             
             <div class="actions-section">
                 <button id="clear-btn" class="danger-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Clear Icon">
+                        <title>Clear Data Icon</title>
+                        <polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                    </svg>
                     Clear All Data
                 </button>
             </div>
@@ -86,7 +93,10 @@
                 <form id="chat-form">
                     <input type="text" id="query-input" placeholder="Ask a question about your document..." autocomplete="off" disabled>
                     <button type="submit" id="send-btn" disabled>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Send Icon">
+                            <title>Send Message Icon</title>
+                            <line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
                     </button>
                 </form>
             </div>
@@ -95,6 +105,12 @@
 
     <footer class="app-footer">
         <p>Powered by <span class="highlight">NVIDIA AI</span> & LangChain. Built with precision.</p>
+        <p class="author-info">
+            Created by <strong>Arpit Ramesan</strong> |
+            <a href="https://github.com/arktrek" target="_blank" rel="noopener noreferrer">GitHub</a> |
+            <a href="https://linkedin.com/in/arpitramesan" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+            <a href="https://arpitramesansportfolio.pythonanywhere.com/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+        </p>
     </footer>
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
