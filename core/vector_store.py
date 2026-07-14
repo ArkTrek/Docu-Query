@@ -4,7 +4,10 @@ from langchain_chroma import Chroma
 from langchain_nvidia_ai_endpoints import NVIDIAEmbeddings
 
 # Directory to store the Chroma database
-CHROMA_PATH = "chroma_db"
+if os.environ.get("VERCEL") == "1":
+    CHROMA_PATH = "/tmp/chroma_db"
+else:
+    CHROMA_PATH = os.environ.get("CHROMA_PATH", "chroma_db")
 
 def init_vector_store(embed_model_name="nvidia/nv-embedqa-e5-v5"):
     """
