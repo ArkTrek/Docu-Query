@@ -11,7 +11,8 @@ from core.vector_store import add_documents_to_db, CHROMA_PATH, clear_db
 from core.llm_chain import answer_query
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = 'uploads'
+app.config['UPLOAD_FOLDER'] = '/tmp/uploads'
+os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16 MB limit
 
 # --- Model Configuration ---
